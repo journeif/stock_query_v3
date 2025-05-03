@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Stock Query App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application to search, analyze, and save key stock metrics. Designed for users who want quick insights into stock growth, P/E ratios, and sector performance — all in one place.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* **Query stock data** by ticker symbol
+* **Calculate key metrics**: Growth Rate, P/E Ratio, Growth over P/E
+* **Favorite stocks** and store them in a local database
+* **Filter favorites** by industry/sector
+* **Track winning percentages** (optional analytics)
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Frontend**: \[Framework/library you used] (e.g., React, HTML/CSS)
+* **Backend**: \[Language] (e.g., Python Flask, Node.js)
+* **Database**: \[Database] (e.g., SQLite, PostgreSQL)
+* **Other Tools**: Docker Compose (optional), Unit Testing Framework (\[e.g., Pytest, Jest])
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+1. **Clone the repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/your-username/stock-query-app.git
+cd stock-query-app
+```
 
-### `npm run build`
+2. **Install dependencies**
+   *(adjust based on your stack)*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+pip install -r requirements.txt  # Python example
+# OR
+npm install  # Node.js example
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run the application**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Backend
+python app.py  # OR npm start
 
-### `npm run eject`
+# Frontend (if separate)
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Run unit tests (optional)**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+pytest  # Python example
+# OR
+npm test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Search for a stock using its ticker (e.g., AAPL)
+* View calculated metrics instantly
+* Save favorite stocks to track later
+* Filter favorites by sector to compare performance
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues, and feature requests are welcome!
+Please open an issue to discuss proposed changes before submitting a PR.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+[MIT](LICENSE) — free to use and modify.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
+**Maintainer**: Journei \[Your Last Name]
+\[Your Email or LinkedIn]
+Feel free to reach out with questions, ideas, or collaboration opportunities.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
