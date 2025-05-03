@@ -1,38 +1,134 @@
-.App {
+/* app.css — Clean and modern UI baseline */
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif; /* Clean, modern font */
+  background-color: #f5f7fa; /* Light grey background */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark grey text for readability */
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #1f2937; /* Darker grey for headings */
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"], select {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd; /* Lighter border for a clean look */
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  background-color: #fff; /* White background for input */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue focus state */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  background-color: #3b82f6; /* Blue */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3); /* Blue glow on focus */
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #1f2937;
+}
+
+.metrics {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.metrics div {
+  text-align: center;
+  color: #6b7280; /* Medium grey for secondary text */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1e3a8a; /* Deep blue */
+  padding: 1rem 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a:hover {
+  text-decoration: underline; /* Subtle hover effect */
+}
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Centering the content */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the page takes up full height */
+  padding: 2rem;
+}
+
+.StockSearch, .card, .navbar {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
