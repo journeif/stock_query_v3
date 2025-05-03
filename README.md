@@ -82,6 +82,8 @@ This project uses two financial APIs:
 - **API Calls**: Axios
 - **Database**: Supabase
 - **Styling**: Custom CSS
+  
+![DC057082-7C43-4CB4-8E40-5B6B1D37ADBC](https://github.com/user-attachments/assets/281e12ec-b480-4347-a2d5-c6709d64358f)
 
 ## Future Enhancements
 
