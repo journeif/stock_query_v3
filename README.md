@@ -1,99 +1,97 @@
-# Stock Query App
+# StackUp Stock Analytics
 
-A web application to search, analyze, and save key stock metrics. Designed for users who want quick insights into stock growth, P/E ratios, and sector performance — all in one place.
+A modern React application for querying stock information and analyzing financial metrics.
 
 ## Features
 
-* **Query stock data** by ticker symbol
-* **Calculate key metrics**: Growth Rate, P/E Ratio, Growth over P/E
-* **Favorite stocks** and store them in a local database
-* **Filter favorites** by industry/sector
-* **Track winning percentages** (optional analytics)
+- **Search Stocks**: Look up stocks by ticker symbol
+- **Advanced Financial Metrics**: View calculated metrics including:
+  - Current price and 52-week high/low
+  - P/E ratio
+  - Net Income Growth Rate (1-year)
+  - PEG ratio (Price/Earnings to Growth)
+  - Company industry and profile information
+- **Favorites System**: Save and manage your favorite stocks
+- **Industry Filtering**: Filter favorites by industry
+- **Search & Filter**: Search functionality across your favorites
+- **Error Handling**: Clean, user-friendly error messages
+- **Responsive Design**: Works on mobile, tablet, and desktop
 
-## Tech Stack
+## Installation
 
-Frontend:
-
-React.js (Vite)
-
-Tailwind CSS
-
-React Router DOM
-
-Axios (API calls)
-
-Backend / Database:
-
-Supabase (PostgreSQL + Auth)
-
-APIs:
-
-Finnhub API (primary)
-
-Alpha Vantage API (backup)
-
-Tooling:
-
-Git & GitHub (version control)
-
-Visual Studio Code
-
-Node.js + NPM
-
-## Setup Instructions
-
-1. **Clone the repository**
-
+1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/stock-query-app.git
-cd stock-query-app
+git clone https://github.com/your-username/stackup.git
+cd stackup
 ```
 
-2. **Install dependencies**
-   *(adjust based on your stack)*
-
+2. Install dependencies:
 ```bash
-pip install -r requirements.txt  # Python example
-# OR
-npm install  # Node.js example
+npm install
 ```
 
-3. **Run the application**
+3. Create a `.env` file in the root directory with your API keys:
+```
+REACT_APP_FINNHUB_API_KEY=your_finnhub_api_key
+REACT_APP_ALPHAVANTAGE_API_KEY=your_alphavantage_api_key
+REACT_APP_SUPABASE_URL=your_supabase_url
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
+4. Start the development server:
 ```bash
-# Backend
-python app.py  # OR npm start
-
-# Frontend (if separate)
 npm start
 ```
 
-4. **Run unit tests (optional)**
+## Database Setup (Supabase)
 
-```bash
-pytest  # Python example
-# OR
-npm test
-```
+1. Create a new project on [Supabase](https://supabase.io)
+2. Create a new table called `favorites` with the following columns:
 
-## Usage
+| Column Name | Type | Description |
+|-------------|------|-------------|
+| id | uuid | Primary key (default) |
+| created_at | timestamp | Created timestamp (default) |
+| symbol | text | Stock ticker symbol |
+| company_name | text | Company name |
+| price | float | Stock price |
+| pe_ratio | float | Price to earnings ratio |
+| eps | float | Earnings per share |
+| net_income_growth | float | Net income growth percentage |
+| peg_ratio | float | Price/Earnings to Growth ratio |
+| industry | text | Company industry |
+| high_52_week | float | 52-week high price |
+| low_52_week | float | 52-week low price |
 
-* Search for a stock using its ticker (e.g., AAPL)
-* View calculated metrics instantly
-* Save favorite stocks to track later
-* Filter favorites by sector to compare performance
+3. Get your Supabase URL and Anonymous Key from the project settings and add them to your `.env` file.
 
-## Contributing
+## API Keys
 
-Contributions, issues, and feature requests are welcome!
-Please open an issue to discuss proposed changes before submitting a PR.
+This project uses two financial APIs:
+
+1. **Finnhub API**: Used for stock quotes and company profiles
+   - Sign up at [Finnhub](https://finnhub.io/)
+
+2. **Alpha Vantage API**: Used for comprehensive financial data
+   - Sign up at [Alpha Vantage](https://www.alphavantage.co/)
+
+## Tech Stack
+
+- **Frontend**: React.js
+- **State Management**: React Hooks (useState, useEffect)
+- **API Calls**: Axios
+- **Database**: Supabase
+- **Styling**: Custom CSS
+
+## Future Enhancements
+
+- User authentication system
+- Portfolio creation and tracking
+- Stock comparison tool
+- Historical price charts
+- News integration
+- More advanced financial metrics
 
 ## License
 
-[MIT](LICENSE) — free to use and modify.
-
-## Contact
-
-**Maintainer**: Journei Ferguson, Ashley Darling, Mason Brown, Aunaje Caldwell
-Feel free to reach out with questions, ideas, or collaboration opportunities.
-
+MIT
