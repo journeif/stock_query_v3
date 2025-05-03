@@ -1,0 +1,129 @@
+/* src/components/StockMetrics.css */
+.stock-metrics-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin: 30px auto;
+    max-width: 700px;
+    transition: all 0.3s ease;
+  }
+  
+  .company-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 12px;
+  }
+  
+  .company-header h2 {
+    margin: 0 0 6px 0;
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  
+  .company-industry {
+    color: #7f8c8d;
+    font-size: 14px;
+  }
+  
+  .metrics-section {
+    margin-bottom: 24px;
+  }
+  
+  .metrics-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    color: #34495e;
+    font-weight: 600;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .metric-item {
+    padding: 12px;
+    background-color: #f9f9fc;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .metric-item:hover {
+    background-color: #f1f3f9;
+    transform: translateY(-2px);
+  }
+  
+  .metric-label {
+    display: block;
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 4px;
+  }
+  
+  .metric-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .metric-value.highlight {
+    color: #27ae60;
+  }
+  
+  /* Tooltip styling */
+  .metric-tooltip {
+    position: relative;
+    cursor: help;
+  }
+  
+  .metric-tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #34495e;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  .metric-tooltip:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #34495e transparent transparent transparent;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .metrics-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
