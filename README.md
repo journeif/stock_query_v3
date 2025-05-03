@@ -71,7 +71,6 @@ Please open an issue to discuss proposed changes before submitting a PR.
 
 ## Contact
 
-**Maintainer**: Journei \[Your Last Name]
-\[Your Email or LinkedIn]
+**Maintainer**: Journei Ferguson, Ashley Darling, Mason Brown, Aunaje Caldwell
 Feel free to reach out with questions, ideas, or collaboration opportunities.
 
