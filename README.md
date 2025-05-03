@@ -12,10 +12,33 @@ A web application to search, analyze, and save key stock metrics. Designed for u
 
 ## Tech Stack
 
-* **Frontend**: \[Framework/library you used] (e.g., React, HTML/CSS)
-* **Backend**: \[Language] (e.g., Python Flask, Node.js)
-* **Database**: \[Database] (e.g., SQLite, PostgreSQL)
-* **Other Tools**: Docker Compose (optional), Unit Testing Framework (\[e.g., Pytest, Jest])
+Frontend:
+
+React.js (Vite)
+
+Tailwind CSS
+
+React Router DOM
+
+Axios (API calls)
+
+Backend / Database:
+
+Supabase (PostgreSQL + Auth)
+
+APIs:
+
+Finnhub API (primary)
+
+Alpha Vantage API (backup)
+
+Tooling:
+
+Git & GitHub (version control)
+
+Visual Studio Code
+
+Node.js + NPM
 
 ## Setup Instructions
 
